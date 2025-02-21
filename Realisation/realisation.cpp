@@ -1,13 +1,10 @@
 #include <iostream>
 #include <vector>
-
-// Component Interface
 class Shape {
 public:
     virtual void draw() = 0;
 };
 
-// Leaf Classes
 class Circle : public Shape {
 public:
     void draw() override {
@@ -22,7 +19,6 @@ public:
     }
 };
 
-// Composite Class
 class CompositeShape : public Shape {
 private:
     std::vector<Shape*> shapes;
